@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ trans('admin.login') }}</title>
+  <title>{{ trans('admin.forgot_password') }}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -28,13 +28,12 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-<style>
-    .nopadding-y {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-</style>
-
+ <style>
+ .nopadding-y {
+     padding-top: 0;
+     padding-bottom: 0;
+ }
+ </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -43,7 +42,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+  <p class="login-box-msg">{{ trans('admin.forgot_password') }}</p>
 
     @if (session()->has('success'))
         <div class="alert alert-success nopadding-y">
@@ -55,35 +54,25 @@
         </div>
     @endif
 
+
     <form method="post">
-
         @csrf
-
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="email" class="form-control" name="email" placeholder="Email" value={{ old('email') }}>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
+
       <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox" name="remember_me" value="1"> Remember Me
-            </label>
-          </div>
-        </div>
+
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Reset</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
-    <a href="{{ admin_url('forgot/password') }}">I forgot my password</a><br>
+    <a href={{ admin_url('login') }}>Sign in</a><br>
 
   </div>
   <!-- /.login-box-body -->
@@ -94,16 +83,6 @@
 <script src="{{ url('design/admin') }}/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ url('design/admin') }}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="{{ url('design/admin') }}/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+
 </body>
 </html>
