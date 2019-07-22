@@ -232,7 +232,8 @@ return [
 
         ////
 
-        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        Yajra\DataTables\Facades\DataTables::class,
+        Yajra\DataTables\ButtonsServiceProvider::class,
 
     ],
 

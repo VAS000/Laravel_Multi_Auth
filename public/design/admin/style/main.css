@@ -1,0 +1,13 @@
+.datatable-buttons-container {
+  margin-bottom: 4px;
+}
+
+.datatable-buttons-container .fa.space-right {
+  margin-right: 5px;
+}
+
+.nopadding-y {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+

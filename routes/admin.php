@@ -12,6 +12,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('/reset/password', 'AdminAuth@postResetPassword');
 
     Route::group(['middleware' => 'admin:admin'], function () {
+
+        Route::resource('admin', 'AdminController');
+
         Route::get('/', function() {
             return view('admin.home');
         });

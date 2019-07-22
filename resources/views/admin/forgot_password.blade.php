@@ -28,12 +28,8 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
- <style>
- .nopadding-y {
-     padding-top: 0;
-     padding-bottom: 0;
- }
- </style>
+  <link rel="stylesheet" href="{{ url('design/admin') }}/style.css">
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">

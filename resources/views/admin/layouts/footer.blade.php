@@ -213,6 +213,16 @@
     </script>
     <!-- Bootstrap 3.3.7 -->
     <script src="{{ url('') }}/design/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- Datatables Buttons -->
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net/js/dataTables.buttons.min.js"></script>
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net/js/buttons.print.min.js"></script>
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net/js/buttons.html5.min.js"></script>
+    <script src="{{ url('') }}/design/admin/bower_components/datatables.net/js/jszip.min.js"></script>
+
+
     <!-- Morris.js charts -->
     <script src="{{ url('') }}/design/admin/bower_components/raphael/raphael.min.js"></script>
     <script src="{{ url('') }}/design/admin/bower_components/morris.js/morris.min.js"></script>
@@ -240,5 +250,8 @@
     <script src="{{ url('') }}/design/admin/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ url('') }}/design/admin/dist/js/demo.js"></script>
+
+    @stack('js');
+
     </body>
     </html>
