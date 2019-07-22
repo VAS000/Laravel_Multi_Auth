@@ -75,7 +75,16 @@ class AdminDatatable extends DataTable
                         'className' => 'btn btn-danger',
                     ]
                 ],
-
+                'initComplete' => "function() {
+                    this.api().columns([0,1,2,3,4]).every(function() {
+                        var column = this;
+                        var input = document.createElement('input');
+                        $(input).appendTo($(column.footer()).empty())
+                        .on('change', function() {
+                            column.search($(this).val(), false, false, true).draw();
+                        });
+                    });
+                }"
             ]);
     }
 

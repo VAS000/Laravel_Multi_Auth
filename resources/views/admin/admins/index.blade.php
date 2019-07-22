@@ -11,7 +11,7 @@
 
         {!! $dataTable->table([
         'class' => 'dataTable table table-striped table-bordered table-hover'
-        ]) !!}
+        ], true) !!}
 
     </div>
 </div>
