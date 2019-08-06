@@ -14,7 +14,22 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ url('') }}/design/admin/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
+
+    @if (direction() == 'ltr')
     <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/AdminLTE.min.css">
+    @else
+    <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/rtl/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/rtl/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/rtl/rtl.css">
+    <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/fonts/fonts-fa.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+    <style>
+    html, body {
+        font-family: 'Cairo', sans-serif;
+    }
+    </style>
+    @endif
+
     <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ url('') }}/design/admin/dist/css/skins/_all-skins.min.css">
