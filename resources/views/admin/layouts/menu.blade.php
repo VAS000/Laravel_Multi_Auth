@@ -197,6 +197,22 @@
           </li>
         </ul>
       </li>
+
+
+      <!-- Lang -->
+
+      <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-globe"></i>
+        </a>
+        <ul class="dropdown-menu">
+
+          <!-- Menu Footer-->
+        <li><a href="{{ admin_url('lang/ar') }}">عربي</a></li>
+          <li><a href="{{ admin_url('lang/en') }}">English</a></li>
+        </ul>
+      </li>
+
       <!-- User Account: style can be found in dropdown.less -->
       <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -241,6 +257,9 @@
           </li>
         </ul>
       </li>
+
+
+
       <!-- Control Sidebar Toggle Button -->
       <li>
         <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>

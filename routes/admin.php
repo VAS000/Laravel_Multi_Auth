@@ -23,5 +23,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
     });
 
+    Route::get('/lang/{lang}', function($lang) {
+        session()->has('lang')? session()->forget('lang'): '';
+        session()->put('lang', $lang);
+        return back();
+    });
+
 
 });
